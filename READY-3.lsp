@@ -1,19 +1,19 @@
-;;; #1
-;;; Определите макрос, который возвращает свой вызов
+;- #1
+;- Определите макрос, который возвращает свой вызов
 (defmacro get-call nil
 	`(quote (get-call))
 )
 
-;;; Test #1
+;- Test #1
 (princ "  Test for task #1")
 (print (macroexpand '(get-call)))
 (print (get-call))
 (write-line "")
 
 
-;;; #2
-;;; Определите макрос (POP стек), который читает из стека верхний
-;;; элемент и меняет значение переменной стека
+;- #2
+;- Определите макрос (POP стек), который читает из стека верхний
+;- элемент и меняет значение переменной стека
 
 (defmacro popp (stack)
     `(let
@@ -25,7 +25,7 @@
     )
 )
 
-;;; Test #2
+;- Test #2
 (princ "  Test for task #2")
 (setq stack1 (list 1 2 3 4))
 ;(print (macroexpand '(popp stack1)))
