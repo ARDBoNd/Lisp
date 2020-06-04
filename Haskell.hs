@@ -19,3 +19,13 @@ main = do
        print (split ["a","b","c","d","e","f","g"] ) 
        print (split [1,2,3,4,5] ) 
  
+
+
+-- Задача 16
+-- Определите предикат МНОЖЕСТВО-Р, который проверяет, является ли список
+-- множеством, т.е. входит ли каждый элемент в список лишь один раз.
+checkIsSet::(Eq a) => [a] -> Bool
+checkIsSet list
+    | list == [] = True
+    | (head list) `elem` (tail list) = False
+    | otherwise = checkIsSet(tail list)
