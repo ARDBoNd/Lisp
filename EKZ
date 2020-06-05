@@ -1,1 +1,4 @@
-
+intersect [] _ = []
+intersect (x:xs) ys
+    | x `elem` ys = x : intersect xs ys
+    | otherwise = intersect xs ys
