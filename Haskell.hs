@@ -1,3 +1,12 @@
+-- 4. Реализовать функцию ПЕРЕСЕЧЕНИЕ на языке Haskell, формирующую пересечение 2х множеств.
+intersect [] _ = []
+intersect (x:xs) ys
+    | x `elem` ys = x : intersect xs ys
+    | otherwise = intersect xs ys
+
+
+
+
 -- №12
 -- Определите функцию, разбивающую список (a b с d...) на пары ((а b) (с d)...).
 split [] = [] 
