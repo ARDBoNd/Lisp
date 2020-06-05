@@ -1,4 +1,3 @@
--- 4.Реализовать на языке Haskell функцию пересечение, формирующую пересечение двух множеств.
 intersect [] _ = []
 intersect (x:xs) ys
     | x `elem` ys = x : intersect xs ys
